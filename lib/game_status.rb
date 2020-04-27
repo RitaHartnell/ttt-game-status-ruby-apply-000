@@ -14,3 +14,12 @@ WIN_COMBINATIONS = [
   [0,4,8], #LEFT-RIGHT DIAGONAL
   [2,4,6] #RIGHT-LEFT DIAGONAL
 ]
+
+def won?(board)
+  WIN_COMBINATIONS.each {|win_posibility|
+    if board[win_posibility[0]] == board[win_posibility[1]] && board[win_posibility[0]] == board[win_posibility[2]]
+      return true
+    end
+  }
+  return false
+end

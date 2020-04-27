@@ -34,3 +34,15 @@ def draw?(board)
   end
   return false
 end
+
+def over?(board)
+  thing = won?(board)
+  if draw?(board)
+    return true
+  elsif thing
+    return true
+  end
+  return false
+end
+
+  

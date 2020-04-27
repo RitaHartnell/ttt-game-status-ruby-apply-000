@@ -46,5 +46,12 @@ def over?(board)
 end
 
 def winner(board)
-
+   if over?(board)
+     thing = over?(board)
+     if thing == "draw"
+       return nil
+     end
+     return board[thing[0]]
+   end
+   return nil
 end

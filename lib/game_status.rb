@@ -38,11 +38,12 @@ end
 def over?(board)
   thing = won?(board)
   if draw?(board)
-    return true
+    return "draw"
   elsif thing
-    return true
+    return thing
   end
   return false
 end
 
-  
+def winner(board)
+  if
